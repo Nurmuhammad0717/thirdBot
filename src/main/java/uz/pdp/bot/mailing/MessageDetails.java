@@ -1,4 +1,4 @@
-package uz.pdp.bot;
+package uz.pdp.bot.mailing;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

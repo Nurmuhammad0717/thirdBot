@@ -1,4 +1,4 @@
-package uz.pdp.bot;
+package uz.pdp.bot.mailing;
 
 import java.util.regex.Pattern;
 

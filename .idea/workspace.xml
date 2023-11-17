@@ -5,10 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08f622df-41f5-40e9-81b3-0315fd4ee934" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/contact/ContactStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/UniversalBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/UniversalBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/mailing/Checker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/MessageDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/mailing/MessageDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/RegistrationDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/mailing/RegistrationDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/Steps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/mailing/Steps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/UniversalBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/mailing/UniversalBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/mailing/UserRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/MessageHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/mail/MailManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/mailing/mail/MailManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/service/MessageHandlerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/service/MessageHandlerService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,24 +46,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "bot-foundation",
-    "last_opened_file_path": "C:/Users/User/Downloads/Telegram Desktop/g33-jm5-lesson2 (2)",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;public&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;bot-foundation&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/g33_jm5_lesson3/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\g33_jm5_lesson3\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="uz.pdp.App" />
+      <module name="g33_jm5_lesson3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="uz.pdp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -63,21 +100,13 @@
       <updated>1699877449895</updated>
       <workItem from="1699877450915" duration="1018000" />
       <workItem from="1699955241588" duration="17021000" />
+      <workItem from="1700038936508" duration="4839000" />
+      <workItem from="1700129666382" duration="8226000" />
+      <workItem from="1700189099017" duration="342000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uz/pdp/bot/mail/MailManager.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

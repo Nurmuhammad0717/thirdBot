@@ -4,6 +4,7 @@ import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
+import uz.pdp.bot.UniversalBot;
 
 import java.time.temporal.TemporalAccessor;
 
@@ -12,15 +13,9 @@ public class App {
 
         TelegramBotsApi api = new TelegramBotsApi(DefaultBotSession.class);
 
+        UniversalBot bot = new UniversalBot();
 
-
-
-
-
-
-
-
-
+        api.registerBot(bot);
 
 
     }

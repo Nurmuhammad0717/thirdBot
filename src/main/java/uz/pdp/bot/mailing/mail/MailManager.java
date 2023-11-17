@@ -52,6 +52,8 @@ public class MailManager {
         System.out.println(user.toString());
         System.out.println(details.toString());
 
+        System.out.println(message);
+
         Thread thread = new Thread(new Runnable() {
             @SneakyThrows
             @Override

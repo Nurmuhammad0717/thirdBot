@@ -35,6 +35,28 @@ public class ContactHandler {
 
             } else if (ContactRepo.CONTACT_STEP.get(message.getChatId())==ContactStep.LAST_NAME) {
                 ContactHandlerService.lastName(message.getChatId(),message.getText(),bot);
+
+            } else if (message.getText().equals("/phoneNumber_search")) {
+                ContactHandlerService.phoneNumberSearch(message.getChatId(),bot);
+
+            } else if (ContactRepo.CONTACT_STEP.get(message.getChatId())==ContactStep.PHONE_NUMBER) {
+                ContactHandlerService.phoneNumber(message.getChatId(),message.getText(),bot);
+
+            } else if (message.getText().equals("/birthDate_search")) {
+            ContactHandlerService.birthDateSearch(message.getChatId(), bot);
+
+            } else if (ContactRepo.CONTACT_STEP.get(message.getChatId())==ContactStep.BIRTH_DATE) {
+            ContactHandlerService.birthDate(message.getChatId(),message.getText(),bot);
+
+            }  else if (message.getText().equals("/anyInfo_search")) {
+            ContactHandlerService.fullInfoSearch(message.getChatId(), bot);
+
+            } else if (ContactRepo.CONTACT_STEP.get(message.getChatId())==ContactStep.FULL_INFO) {
+            ContactHandlerService.fullInfo(message.getChatId(),message.getText(),bot);
+
+            } else if (ContactRepo.CONTACT_STEP.get(message.getChatId())==ContactStep.FINISHED) {
+                ContactHandlerService.finished(message.getChatId(),bot);
+
             }
 
 

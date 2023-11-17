@@ -20,17 +20,26 @@ public class ContactHandlerService {
 
     public ContactHandlerService() throws IOException {
     }
-    private static final List<Person> data = InfoManager.getInfos();
+    private static final List<Person> data;
+
+    static {
+        try {
+            data = InfoManager.getInfos();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
 
     @SneakyThrows
     public static void searchPerson(Long chatId, TelegramLongPollingBot bot) {
-        bot.execute(new SendMessage(chatId.toString(),"/id_Search - searching by id\n" +
-                "/firstName_search - searching by first name\n" +
-                "/lastName_search - searching by last name\n" +
-                "/phoneNumber_search - searching by phone number\n" +
-                "/birthDate_search - searching by birth date\n" +
-                "/fullInfo_search - searching by full info "));
+        bot.execute(new SendMessage(chatId.toString(), """
+                /id_Search - searching by id\s
+                /firstName_search - searching by first name
+                /lastName_search - searching by last name
+                /phoneNumber_search - searching by phone number
+                /birthDate_search - searching by birth date
+                /anyInfo_search - searching by any info\s"""));
     }
 
 
@@ -54,6 +63,8 @@ public class ContactHandlerService {
             bot.execute(new SendMessage(chatId.toString(), "Nothing is found ("));
 
         }
+        ContactRepo.CONTACT_STEP.put(chatId,ContactStep.FINISHED);
+
     }
 
 
@@ -78,6 +89,8 @@ public class ContactHandlerService {
             bot.execute(new SendMessage(chatId.toString(), "Nothing is found ("));
 
         }
+        ContactRepo.CONTACT_STEP.put(chatId,ContactStep.FINISHED);
+
 
     }
 
@@ -98,6 +111,104 @@ public class ContactHandlerService {
                 res.append("\n").append(person.toString());
             }
             bot.execute(new SendMessage(chatId.toString(), res.toString()));
+        }else {
+            bot.execute(new SendMessage(chatId.toString(), "Nothing is found ("));
+
         }
+        ContactRepo.CONTACT_STEP.put(chatId,ContactStep.FINISHED);
+
+    }
+
+    @SneakyThrows
+    public static void phoneNumberSearch(Long chatId, TelegramLongPollingBot bot) {
+        bot.execute(new SendMessage(chatId.toString(),"Enter the phone number of person, you are looking for."));
+        ContactRepo.CONTACT_STEP.put(chatId,ContactStep.PHONE_NUMBER);
+
+    }
+
+    @SneakyThrows
+    public static void phoneNumber(Long chatId, String text, TelegramLongPollingBot bot) {
+
+        List<Person> result = data.stream().filter(person -> person.getPhoneNumber().equals(text)).toList();
+
+        if (!result.isEmpty()){
+            StringBuilder res = new StringBuilder();
+            for (Person person : result) {
+                res.append("\n").append(person.toString());
+            }
+            bot.execute(new SendMessage(chatId.toString(), res.toString()));
+        }else {
+            bot.execute(new SendMessage(chatId.toString(), "Nothing is found ("));
+
+        }
+        ContactRepo.CONTACT_STEP.put(chatId,ContactStep.FINISHED);
+
+
+    }
+
+    @SneakyThrows
+    public static void birthDateSearch(Long chatId, TelegramLongPollingBot bot) {
+        bot.execute(new SendMessage(chatId.toString(),"Enter the birth date of person, you are looking for."));
+        ContactRepo.CONTACT_STEP.put(chatId,ContactStep.BIRTH_DATE);
+
+    }
+
+    @SneakyThrows
+    public static void birthDate(Long chatId, String text, TelegramLongPollingBot bot) {
+
+        List<Person> result = data.stream().filter(person -> person.getBirthDate().equals(text)).toList();
+
+        if (!result.isEmpty()){
+            StringBuilder res = new StringBuilder();
+            for (Person person : result) {
+                res.append("\n").append(person.toString());
+            }
+            bot.execute(new SendMessage(chatId.toString(), res.toString()));
+        }else {
+            bot.execute(new SendMessage(chatId.toString(), "Nothing is found ("));
+
+        }
+
+        ContactRepo.CONTACT_STEP.put(chatId,ContactStep.FINISHED);
+
+
+    }
+
+    @SneakyThrows
+    public static void fullInfoSearch(Long chatId, TelegramLongPollingBot bot) {
+        bot.execute(new SendMessage(chatId.toString(),"Enter the any information of person, you are looking for \n" +
+                "in this pattern example: id=**\nfirstName=***\nlastname=***" +
+                "gender=***\nphoneNumber=***..."));
+        ContactRepo.CONTACT_STEP.put(chatId,ContactStep.FULL_INFO);
+
+    }
+
+    @SneakyThrows
+    public static void fullInfo(Long chatId, String text, TelegramLongPollingBot bot) {
+
+        List<Person> result = data.stream().filter(person -> {
+            return person.toString().contains(text);
+        }).toList();
+
+        if (!result.isEmpty()){
+            StringBuilder res = new StringBuilder();
+            for (Person person : result) {
+                res.append("\n").append(person.toString());
+            }
+            bot.execute(new SendMessage(chatId.toString(), res.toString()));
+        }else {
+            bot.execute(new SendMessage(chatId.toString(), "Nothing is found ("));
+
+        }
+
+        ContactRepo.CONTACT_STEP.put(chatId,ContactStep.FINISHED);
+
+    }
+
+
+    @SneakyThrows
+    public static void finished(Long chatId, TelegramLongPollingBot bot) {
+        bot.execute( new SendMessage(chatId.toString(),"If you want to search someone else press /search_person." +
+                "\nIf you want use another function of bot press /help :)"));
     }
 }

@@ -11,6 +11,7 @@ public class HandlerManager {
         if(update.hasMessage()){
             Message message = update.getMessage();
             MessageHandler.handle(message,bot);
+            ContactHandler.handle(message,bot);
         }
 
     }

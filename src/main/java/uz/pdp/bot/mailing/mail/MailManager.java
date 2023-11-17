@@ -1,12 +1,11 @@
-package uz.pdp.bot.mail;
+package uz.pdp.bot.mailing.mail;
 
 import lombok.SneakyThrows;
-import uz.pdp.bot.MessageDetails;
-import uz.pdp.bot.RegistrationDetails;
+import uz.pdp.bot.mailing.MessageDetails;
+import uz.pdp.bot.mailing.RegistrationDetails;
 
 import javax.mail.Authenticator;
 import javax.mail.Message;
-import javax.mail.MessagingException;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 import javax.mail.Transport;
@@ -24,9 +23,10 @@ public class MailManager {
         Properties props = new Properties();
 
         props.put("mail.smtp.host", "smtp.gmail.com");
-        props.put("mail.smtp.port", "2525");
+        props.put("mail.smtp.port", "465");
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.ssl.enable", "true");
+
 
 
 
@@ -52,7 +52,19 @@ public class MailManager {
         System.out.println(user.toString());
         System.out.println(details.toString());
 
+        System.out.println(message);
+
+        Thread thread = new Thread(new Runnable() {
+            @SneakyThrows
+            @Override
+            public void run() {
         Transport.send(message);
+
+            }
+        });
+
+        thread.start();
+
 
         System.out.println("done");
 

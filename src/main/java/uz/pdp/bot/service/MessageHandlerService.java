@@ -4,11 +4,8 @@ import lombok.SneakyThrows;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import uz.pdp.bot.*;
-import uz.pdp.bot.mail.MailManager;
-
-import java.util.function.Function;
-import java.util.regex.Pattern;
+import uz.pdp.bot.mailing.mail.MailManager;
+import uz.pdp.bot.mailing.*;
 
 public class MessageHandlerService {
 
@@ -18,16 +15,15 @@ public class MessageHandlerService {
 
     @SneakyThrows
     public static void help(Long chatId, TelegramLongPollingBot bot){
-        bot.execute(new SendMessage(chatId.toString(),
-                "This bot can help you to send e-mails to your friends by E-mail address." +
-                        "\n Please press /try in order to start mailing" ));
+        bot.execute(new SendMessage(chatId.toString(), "/try - sending message from e-mail address." +
+                "\n/search_person - searching people from contact list." ));
     }
 
     @SneakyThrows
     public static void trY(Long chatId, TelegramLongPollingBot bot, String name){
         bot.execute(new SendMessage(chatId.toString(),
                 name+" Please enter your e-mail address which you want to send messages from." ));
-        UserRepo.STEPS.put(chatId,Steps.REGISTER_EMAIL);
+        UserRepo.STEPS.put(chatId, Steps.REGISTER_EMAIL);
     }
 
 
@@ -87,6 +83,7 @@ public class MessageHandlerService {
         UserRepo.MESSAGE_DETAILS.get(chatId).setText(text);
 
         MailManager.sendMail(UserRepo.MESSAGE_DETAILS.get(chatId),UserRepo.REGISTRATION_DETAILS.get(chatId));
+
         bot.execute(new SendMessage(chatId.toString(),"Your message has been sent and " +
                 "\n Here are details :"+UserRepo.MESSAGE_DETAILS.get(chatId).toString()));
         UserRepo.STEPS.put(chatId,Steps.FINISHED);

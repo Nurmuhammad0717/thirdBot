@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08f622df-41f5-40e9-81b3-0315fd4ee934" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/contact/ContactStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/mailing/Checker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/MessageDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/mailing/MessageDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/RegistrationDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/mailing/RegistrationDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/Steps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/mailing/Steps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/UniversalBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/mailing/UniversalBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/mailing/UserRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/MessageHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/mail/MailManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/mailing/mail/MailManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/service/MessageHandlerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/service/MessageHandlerService.java" afterDir="false" />
-    </list>
+    <list default="true" id="08f622df-41f5-40e9-81b3-0315fd4ee934" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,7 +86,7 @@
       <workItem from="1699955241588" duration="17021000" />
       <workItem from="1700038936508" duration="4839000" />
       <workItem from="1700129666382" duration="8226000" />
-      <workItem from="1700189099017" duration="342000" />
+      <workItem from="1700189099017" duration="671000" />
     </task>
     <servers />
   </component>

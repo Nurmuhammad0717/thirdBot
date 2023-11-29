@@ -12,6 +12,8 @@ public class HandlerManager {
             Message message = update.getMessage();
             MessageHandler.handle(message,bot);
             ContactHandler.handle(message,bot);
+        } else if (update.hasCallbackQuery()) {
+            ContactHandler.handle(update.getMessage(),bot);
         }
 
     }

@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d49a49a-7345-4e63-a3f2-d784c133871e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/HandlerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/HandlerManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/mailing/UniversalBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/UniversalBot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +54,8 @@
       <workItem from="1700638728308" duration="3206000" />
       <workItem from="1701066643240" duration="10000" />
       <workItem from="1701080335721" duration="150000" />
+      <workItem from="1701255491886" duration="767000" />
+      <workItem from="1701337326137" duration="382000" />
     </task>
     <servers />
   </component>

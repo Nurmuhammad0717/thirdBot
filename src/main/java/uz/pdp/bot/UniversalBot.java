@@ -5,10 +5,13 @@ import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import uz.pdp.bot.handler.HandlerManager;
 
+import static uz.pdp.bot.BotConfig.BOT_TOKEN;
+import static uz.pdp.bot.BotConfig.BOT_USERNAME;
+
 public class UniversalBot extends TelegramLongPollingBot {
 
     public UniversalBot() {
-        super("6731491453:AAFgndc-G3I-sr72L5qDqPWPPTKv3TvoCFc");
+        super(BOT_TOKEN);
     }
 
     @Override
@@ -20,6 +23,6 @@ public class UniversalBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotUsername() {
-        return "Uni_VersalBot_bot";
+        return BOT_USERNAME;
     }
 }

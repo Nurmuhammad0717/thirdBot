@@ -1,4 +1,4 @@
-package uz.pdp.bot.contact;
+package uz.pdp.bot;
 
 import java.util.Arrays;
 import java.util.Map;
@@ -6,12 +6,10 @@ import java.util.stream.Collectors;
 
 public enum CommandEnum {
 
-      ID("/id"),
-      FIRST_NAME("/firstName"),
-    LAST_NAME("/lastName"),
-    PHONE_NUMBER("/phoneNumber"),
-    BIRTH_DATE("/birthDate"),
-    ANY_INFO("/anyInfo");
+    START("/start"),
+    HELP("/help"),
+    SEND_MAIL("/send_mail"),
+    ORDER("/order");
 
 
       private static Map<String,CommandEnum> map = Arrays.stream(CommandEnum.values())

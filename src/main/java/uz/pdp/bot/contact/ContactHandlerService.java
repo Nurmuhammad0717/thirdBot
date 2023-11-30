@@ -1,4 +1,4 @@
-package uz.pdp.bot.service;
+package uz.pdp.bot.contact;
 
 import lombok.SneakyThrows;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;

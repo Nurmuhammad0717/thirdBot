@@ -5,22 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d49a49a-7345-4e63-a3f2-d784c133871e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/BotConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/ButtonUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/CallbackHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/CallbackHandlerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/OrderHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/UniversalBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/UniversalBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/contact/CommandEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/CommandEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/CallbackHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/ContactHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/contact/ContactHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/HandlerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/HandlerManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/MessageHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/Step.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/Step.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/service/CommandService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/service/ContactHandlerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/contact/ContactHandlerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/service/MessageHandlerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/service/MessageHandlerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/ButtonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/ButtonUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/CallbackHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/CallbackHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/CallbackHandlerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/CallbackHandlerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/DrinksPhoto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/DrinksPhoto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/MealsPhoto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/MealsPhoto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/OrderHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/OrderHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/OtherPhoto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/OtherPhoto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/Step.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/StepsRepo.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,21 +42,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "callback-query",
-    "last_opened_file_path": "C:/Users/hp/Downloads/Telegram Desktop/g33_jm5_lesson3/src/main/resources/photos",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;callback-query&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hp/Downloads/Telegram Desktop/g33_jm5_lesson3/src/main/resources/photos&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hp\Downloads\Telegram Desktop\g33_jm5_lesson3\src\main\resources\photos" />
@@ -84,7 +78,10 @@
       <workItem from="1701080335721" duration="150000" />
       <workItem from="1701255491886" duration="767000" />
       <workItem from="1701337326137" duration="382000" />
-      <workItem from="1701345447945" duration="8755000" />
+      <workItem from="1701345447945" duration="13829000" />
+      <workItem from="1701424211648" duration="6875000" />
+      <workItem from="1701488846661" duration="11379000" />
+      <workItem from="1701572474452" duration="2563000" />
     </task>
     <servers />
   </component>

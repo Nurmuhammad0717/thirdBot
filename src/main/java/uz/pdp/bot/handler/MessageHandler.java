@@ -8,6 +8,7 @@ import org.telegram.telegrambots.meta.api.objects.User;
 import uz.pdp.bot.mailing.Steps;
 import uz.pdp.bot.mailing.UserRepo;
 //import uz.pdp.bot.mail.MailManager;
+import uz.pdp.bot.handler.order.OrderHandler;
 import uz.pdp.bot.service.MessageHandlerService;
 
 public class MessageHandler {
@@ -22,14 +23,14 @@ public class MessageHandler {
             if(message.getText().equals("/start")) {
                 MessageHandlerService.start(message.getChatId(), bot, from.getFirstName());
 
-            } else if (message.getText().equals("/search_person")) {
-                ContactHandler.handle(message,bot);
-
             } else if (message.getText().equals("/help")) {
                 MessageHandlerService.help(message.getChatId(),bot);
 
-            } else if (message.getText().equals("/try")) {
-                MessageHandlerService.trY(message.getChatId(),bot,from.getFirstName());
+            } else if (message.getText().equals("/order")) {
+                OrderHandler.handle(message,bot);
+
+            } else if (message.getText().equals("/mail")) {
+                MessageHandlerService.mail(message.getChatId(),bot,from.getFirstName());
 
             } else if (UserRepo.STEPS.get(message.getChatId())== Steps.REGISTER_EMAIL) {
                MessageHandlerService.registerEmail(message.getText(),message.getChatId(), bot);

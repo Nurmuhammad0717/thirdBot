@@ -1,11 +1,8 @@
-package uz.pdp.bot.handler;
+package uz.pdp.bot.contact;
 
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.User;
-import uz.pdp.bot.contact.ContactRepo;
-import uz.pdp.bot.contact.ContactStep;
-import uz.pdp.bot.service.ContactHandlerService;
 
 public class ContactHandler {
 

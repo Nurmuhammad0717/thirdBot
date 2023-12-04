@@ -3,8 +3,7 @@ package uz.pdp;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
-import uz.pdp.bot.contact.InfoManager;
-import uz.pdp.bot.mailing.UniversalBot;
+import uz.pdp.bot.UniversalBot;
 
 import java.io.IOException;
 

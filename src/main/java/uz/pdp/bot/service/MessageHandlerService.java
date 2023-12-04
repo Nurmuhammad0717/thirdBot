@@ -15,12 +15,14 @@ public class MessageHandlerService {
 
     @SneakyThrows
     public static void help(Long chatId, TelegramLongPollingBot bot){
-        bot.execute(new SendMessage(chatId.toString(), "/try - sending message from e-mail address." +
-                "\n/search_person - searching people from contact list." ));
+        bot.execute(new SendMessage(chatId.toString(), "This bot can help you to send messages from your e-mail address and" +
+                "by this bot you can order food from your lovely restaurants and cafes." +
+                "\n If you want to send mail press /mail" +
+                "\n If you want to order food press /order" ));
     }
 
     @SneakyThrows
-    public static void trY(Long chatId, TelegramLongPollingBot bot, String name){
+    public static void mail(Long chatId, TelegramLongPollingBot bot, String name){
         bot.execute(new SendMessage(chatId.toString(),
                 name+" Please enter your e-mail address which you want to send messages from." ));
         UserRepo.STEPS.put(chatId, Steps.REGISTER_EMAIL);

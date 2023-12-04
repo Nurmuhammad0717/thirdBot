@@ -2,7 +2,9 @@ package uz.pdp.bot;
 
 import org.telegram.telegrambots.meta.api.objects.CallbackQuery;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboard;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
+import uz.pdp.bot.handler.order.basket.BasketRepo;
 
 import java.util.List;
 
@@ -65,29 +67,45 @@ public class ButtonUtils {
                     InlineKeyboardButton.builder().callbackData("back").text("Back ↩️").build()
             )).build();
 
-    public static InlineKeyboardMarkup BASKET_BUTTONS = InlineKeyboardMarkup.builder()
-            .keyboardRow(List.of(
-                    InlineKeyboardButton.builder().text("-").callbackData("minus").build(),
-                    InlineKeyboardButton.builder().text("quantity").callbackData("quantity").build(),
-                    InlineKeyboardButton.builder().text("+").callbackData("plus").build()
-            ))
-            .keyboardRow(List.of(
-                    InlineKeyboardButton.builder().callbackData("add_to_basket").text("Add to basket 🧺").build()
-            )).build();
+
+    public static InlineKeyboardMarkup getBasketButtons(Long productId,Long chatId, Integer quantity){
 
 
-    public static InlineKeyboardMarkup getBasketButtons(Long productId){
-        return InlineKeyboardMarkup.builder()
+
+
+        InlineKeyboardMarkup build = InlineKeyboardMarkup.builder()
                 .keyboardRow(List.of(
-                        InlineKeyboardButton.builder().text("-").callbackData("minus;"+productId).build(),
-                        InlineKeyboardButton.builder().text("amount").callbackData("quantity").build(),
-                        InlineKeyboardButton.builder().text("+").callbackData("plus;"+productId).build()
+                        InlineKeyboardButton.builder().text("-").callbackData("minus;" + productId+";"+quantity).build(),
+                        InlineKeyboardButton.builder().text(String.valueOf(quantity)).callbackData("quantity").build(),
+                        InlineKeyboardButton.builder().text("+").callbackData("plus;" + productId+";"+quantity).build()
                 ))
                 .keyboardRow(List.of(
                         InlineKeyboardButton.builder().callbackData("add_to_basket").text("Add to basket 🧺").build()
                 )).build();
+
+        return build;
     }
 
 
+    public static ReplyKeyboard addToBasketButtons() {
 
+        return InlineKeyboardMarkup.builder()
+                .keyboardRow(List.of(
+                        InlineKeyboardButton.builder().text("Clear basket").callbackData("clear_basket").build(),
+                        InlineKeyboardButton.builder().text("Go to payment").callbackData("do_payment").build()
+                ))
+                .keyboardRow(List.of(
+                        InlineKeyboardButton.builder().callbackData("back").text("Back ↩️").build()
+                )).build();
+
+    }
+
+    public static ReplyKeyboard wayOfPayment() {
+        return InlineKeyboardMarkup.builder()
+                .keyboardRow(List.of(
+                        InlineKeyboardButton.builder().text("Click").callbackData("clear_basket").build(),
+                        InlineKeyboardButton.builder().text("Pay me").callbackData("do_payment").build()
+                )).build();
+
+    }
 }

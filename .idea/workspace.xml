@@ -13,8 +13,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/MealsPhoto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/MealsPhoto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/OrderHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/OrderHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/OtherPhoto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/OtherPhoto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/Step.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/StepsRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/basket/BasketRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/bot/handler/order/basket/BasketRepo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +80,8 @@
       <workItem from="1701345447945" duration="13829000" />
       <workItem from="1701424211648" duration="6875000" />
       <workItem from="1701488846661" duration="11379000" />
-      <workItem from="1701572474452" duration="2563000" />
+      <workItem from="1701572474452" duration="2669000" />
+      <workItem from="1701668751510" duration="9834000" />
     </task>
     <servers />
   </component>

@@ -3,7 +3,9 @@ package uz.pdp.bot.handler.order;
 import lombok.SneakyThrows;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageReplyMarkup;
 import org.telegram.telegrambots.meta.api.objects.CallbackQuery;
+import uz.pdp.bot.ButtonUtils;
 import uz.pdp.bot.handler.order.basket.BasketRepo;
 
 import java.util.HashMap;
@@ -16,10 +18,18 @@ public class CallbackHandlerService {
 
     @SneakyThrows
     public static void fastFood(CallbackQuery callbackQuery, TelegramLongPollingBot bot) {
-        Long chatId = callbackQuery.getMessage().getChatId();
-        SendMessage sendMessage = new SendMessage(chatId.toString(),"Fields");
-        sendMessage.setReplyMarkup(FIELDS);
-        bot.execute(sendMessage);
+//        Long chatId = callbackQuery.getMessage().getChatId();
+//        SendMessage sendMessage = new SendMessage(chatId.toString(),"Fields");
+//        sendMessage.setReplyMarkup(FIELDS);
+
+        EditMessageReplyMarkup edited = EditMessageReplyMarkup.builder()
+                .replyMarkup(FIELDS)
+                .inlineMessageId(callbackQuery.getInlineMessageId())
+                .chatId(callbackQuery.getMessage().getChatId())
+                .messageId(callbackQuery.getMessage().getMessageId())
+                .build();
+
+        bot.execute(edited);
 
 
     }
@@ -27,57 +37,62 @@ public class CallbackHandlerService {
 
     @SneakyThrows
     public static void meals_menu(CallbackQuery callbackQuery, TelegramLongPollingBot bot) {
-        Long chatId = callbackQuery.getMessage().getChatId();
-        SendMessage sendMessage = new SendMessage(chatId.toString(),"Menu meals");
-        sendMessage.setReplyMarkup(MENU_FAST_FOOD);
-        bot.execute(sendMessage);
+//        Long chatId = callbackQuery.getMessage().getChatId();
+//        SendMessage sendMessage = new SendMessage(chatId.toString(),"Menu meals");
+//        sendMessage.setReplyMarkup(MENU_FAST_FOOD);
+
+        EditMessageReplyMarkup edited = EditMessageReplyMarkup.builder()
+                .replyMarkup(MENU_FAST_FOOD)
+                .inlineMessageId(callbackQuery.getInlineMessageId())
+                .chatId(callbackQuery.getMessage().getChatId())
+                .messageId(callbackQuery.getMessage().getMessageId())
+                .build();
+
+
+
+        bot.execute(edited);
 
     }
 
     @SneakyThrows
     public static void drinks_menu(CallbackQuery callbackQuery, TelegramLongPollingBot bot) {
-        Long chatId = callbackQuery.getMessage().getChatId();
-        SendMessage sendMessage = new SendMessage(chatId.toString(),"Menu drinks");
-        sendMessage.setReplyMarkup(MENU_DRINKS);
-        bot.execute(sendMessage);
+//        Long chatId = callbackQuery.getMessage().getChatId();
+//        SendMessage sendMessage = new SendMessage(chatId.toString(),"Menu drinks");
+//        sendMessage.setReplyMarkup(MENU_DRINKS);
+
+
+        EditMessageReplyMarkup edited = EditMessageReplyMarkup.builder()
+                .replyMarkup(MENU_DRINKS)
+                .inlineMessageId(callbackQuery.getInlineMessageId())
+                .chatId(callbackQuery.getMessage().getChatId())
+                .messageId(callbackQuery.getMessage().getMessageId())
+                .build();
+
+
+        bot.execute(edited);
+
     }
 
     @SneakyThrows
     public static void other_menu(CallbackQuery callbackQuery, TelegramLongPollingBot bot) {
-        Long chatId = callbackQuery.getMessage().getChatId();
-        SendMessage sendMessage = new SendMessage(chatId.toString(),"Menu drinks");
-        sendMessage.setReplyMarkup(OTHERS_MENU);
-        bot.execute(sendMessage);
+//        Long chatId = callbackQuery.getMessage().getChatId();
+//        SendMessage sendMessage = new SendMessage(chatId.toString(),"Menu drinks");
+//        sendMessage.setReplyMarkup(OTHERS_MENU);
+
+
+        EditMessageReplyMarkup edited = EditMessageReplyMarkup.builder()
+                .replyMarkup(OTHERS_MENU)
+                .inlineMessageId(callbackQuery.getInlineMessageId())
+                .chatId(callbackQuery.getMessage().getChatId())
+                .messageId(callbackQuery.getMessage().getMessageId())
+                .build();
+
+        bot.execute(edited);
     }
 
-    public static void plusProduct(String data, Long chatId) {
-        String[] split = data.split(";");
-            long productId = Long.parseLong(data);
-        if(PRODUCT_MAP.get(chatId)!=null){
-            Integer quantity = PRODUCT_MAP.get(chatId).get(productId);
-            PRODUCT_MAP.get(chatId).put(productId,++quantity);
-        }else{
-            Map<Long,Integer> productAmount = new HashMap<>();
-            int quantity = 1;
-            productAmount.put(productId,quantity);
-            PRODUCT_MAP.put(chatId,productAmount);
-        }
 
-    }
 
-    public static void minusProduct(String data, Long chatId) {
-        String[] split = data.split(";");
-        if(PRODUCT_MAP.get(chatId)!=null){
-            long productId = Long.parseLong(data);
-            Integer quantity = PRODUCT_MAP.get(chatId).get(productId);
-            PRODUCT_MAP.get(chatId).put(productId,--quantity);
-        }else{
-            Map<Long,Integer> productAmount = new HashMap<>();
-            int quantity = 0;
-            PRODUCT_MAP.put(chatId,productAmount);
-        }
 
-    }
 
 
 

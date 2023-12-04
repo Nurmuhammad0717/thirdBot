@@ -19,7 +19,7 @@ public class OtherPhoto {
                 ID: 8
                 Name: Sezar salad
                 Price: 21,000\s""");
-        sendPhoto.setReplyMarkup(ButtonUtils.getBasketButtons(8L));
+        sendPhoto.setReplyMarkup(ButtonUtils.getBasketButtons(8L,message.getChatId(),0));
 
         bot.execute(sendPhoto);
     }
@@ -32,7 +32,7 @@ public class OtherPhoto {
                 ID: 9
                 Name: Sezam salad
                 Price: 24,000\s""");
-          sendPhoto.setReplyMarkup(ButtonUtils.getBasketButtons(9L));
+          sendPhoto.setReplyMarkup(ButtonUtils.getBasketButtons(9L,message.getChatId(),0));
 
           bot.execute(sendPhoto);
     }
@@ -45,7 +45,7 @@ public class OtherPhoto {
                 ID: 10
                 Name: Greek salad
                 Price: 25,000\s""");
-          sendPhoto.setReplyMarkup(ButtonUtils.getBasketButtons(10L));
+          sendPhoto.setReplyMarkup(ButtonUtils.getBasketButtons(10L,message.getChatId(),0));
 
           bot.execute(sendPhoto);
     }

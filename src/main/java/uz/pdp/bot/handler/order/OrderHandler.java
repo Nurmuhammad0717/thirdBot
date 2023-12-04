@@ -2,6 +2,7 @@ package uz.pdp.bot.handler.order;
 
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageReplyMarkup;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
@@ -18,7 +19,10 @@ public class OrderHandler {
             SendMessage sendMessage = new SendMessage(message.getChatId().toString()
                     , "Choose restaurant");
             sendMessage.setReplyMarkup(BUTTONS_RESTAURANTS);
-            bot.execute(sendMessage);
+
+
+
+        bot.execute(sendMessage);
 
     }
 }

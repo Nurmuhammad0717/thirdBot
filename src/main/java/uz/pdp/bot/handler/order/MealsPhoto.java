@@ -19,7 +19,7 @@ public class MealsPhoto {
                 ID: 3
                 Name: Chicken cheeseburger
                 Price: 30,000""");
-        sendPhoto.setReplyMarkup(ButtonUtils.getBasketButtons(3L));
+        sendPhoto.setReplyMarkup(ButtonUtils.getBasketButtons(3L,message.getChatId(),0));
 
         bot.execute(sendPhoto);
     }
@@ -33,7 +33,7 @@ public class MealsPhoto {
                 ID: 1
                 Name: Barbeque burger
                 Price: 27,000""");
-        sendPhoto.setReplyMarkup(ButtonUtils.getBasketButtons(1L));
+        sendPhoto.setReplyMarkup(ButtonUtils.getBasketButtons(1L,message.getChatId(),0));
 
         bot.execute(sendPhoto);
     }
@@ -47,7 +47,7 @@ public class MealsPhoto {
                 ID:2
                 Name: Chicken burger
                 Price: 27,000""");
-        sendPhoto.setReplyMarkup(ButtonUtils.getBasketButtons(2L));
+        sendPhoto.setReplyMarkup(ButtonUtils.getBasketButtons(2L,message.getChatId(),0));
 
         bot.execute(sendPhoto);
     }
@@ -61,7 +61,7 @@ public class MealsPhoto {
                 ID: 4
                 Name: Double chicken cheeseburger
                 Price: 35,000""");
-        sendPhoto.setReplyMarkup(ButtonUtils.getBasketButtons(4L));
+        sendPhoto.setReplyMarkup(ButtonUtils.getBasketButtons(4L,message.getChatId(),0));
 
         bot.execute(sendPhoto);
     }

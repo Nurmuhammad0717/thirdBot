@@ -22,7 +22,7 @@ public class DrinksPhoto {
                ID: 5
                Name: Fanta 0,5L
                Price: 7,000""");
-       sendPhoto.setReplyMarkup(ButtonUtils.getBasketButtons(5L));
+       sendPhoto.setReplyMarkup(ButtonUtils.getBasketButtons(5L,message.getChatId(),0));
        bot.execute(sendPhoto);
    }
      @SneakyThrows
@@ -34,7 +34,7 @@ public class DrinksPhoto {
                ID: 7
                Name: Sprite 0,5L
                Price: 7,000""");
-         sendPhoto.setReplyMarkup(ButtonUtils.getBasketButtons(7L));
+         sendPhoto.setReplyMarkup(ButtonUtils.getBasketButtons(7L,message.getChatId(),0));
        bot.execute(sendPhoto);
    }
 
@@ -47,7 +47,7 @@ public class DrinksPhoto {
                  ID: 6
                  Name: Montella 0,5L
                  Price : 3,000""");
-       sendPhoto.setReplyMarkup(ButtonUtils.getBasketButtons(6L));
+       sendPhoto.setReplyMarkup(ButtonUtils.getBasketButtons(6L,message.getChatId(),0));
        bot.execute(sendPhoto);
    }
 
